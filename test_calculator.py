@@ -9,4 +9,5 @@ def test_mul():
 def test_div():
     assert div(10,5) == 2
 def test_div2():
-    assert div(10,0) == 5
+    with pytest.raises(ValueError):
+        div(10, 0)
